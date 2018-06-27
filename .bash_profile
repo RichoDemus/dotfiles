@@ -36,3 +36,4 @@ alias ctop="docker run -ti --name ctop --rm -v /var/run/docker.sock:/var/run/doc
 alias mvn-sourcedoc="mvn dependency:sources && mvn dependency:resolve -Dclassifier=javadoc"
 
 alias gpr="git pull --prune"
+alias grup="git remote update --prune"
