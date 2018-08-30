@@ -1,4 +1,12 @@
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias top="sudo htop"
+alias du="ncdu --color dark -rr -x"
+alias man="tldr"
 
 GIT_PS1_SHOWDIRTYSTATE=true
 export PS1='[\u@mbp \w$(__git_ps1)]\$ '
