@@ -7,6 +7,7 @@ alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias top="sudo htop"
 alias du="ncdu --color dark -rr -x"
 alias man="tldr"
+alias cat='bat'
 
 GIT_PS1_SHOWDIRTYSTATE=true
 export PS1='[\u@mbp \w$(__git_ps1)]\$ '
