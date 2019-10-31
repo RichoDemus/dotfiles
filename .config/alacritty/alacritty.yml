@@ -11,9 +11,8 @@ env:
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
   #TERM: xterm-256color
-  # confusing stuff, macos doesn't seem to report locale correctly to alacritty
-  # see: https://github.com/jwilm/alacritty/issues/2566
-  LC_ALL: "sv_SE.UTF-8"
+#  LC_ALL: "sv_SE.UTF-8"
+  LC_CTYPE: "sv_SE.UTF-8"
 #  LC_ALL: "C"
 
 window:
@@ -105,17 +104,17 @@ tabspaces: 8
 # Font configuration (changes require restart)
 font:
   # Normal (roman) font face
-  #normal:
+  normal:
     # Font family
     #
     # Default:
     #   - (macOS) Menlo
     #   - (Linux) monospace
     #   - (Windows) Consolas
-    #family: monospace
+    family: Hasklig
 
     # The `style` can be specified to pick a specific face.
-    #style: Regular
+    style: Regular
 
   # Bold font face
   #bold:
@@ -140,7 +139,7 @@ font:
     #style: Italic
 
   # Point size
-  size: 11.0
+  size: 12.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -371,7 +370,7 @@ live_config_reload: true
 #   - (Linux) user login shell
 #   - (Windows) powershell
 shell:
-  program: /bin/bash
+  program: /bin/zsh
   args:
     - --login
 
